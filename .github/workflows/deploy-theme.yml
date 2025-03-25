@@ -1,0 +1,30 @@
+name: Deploy Theme to Shopify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli
+
+      - name: Deploy to Shopify
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
+          SHOPIFY_THEME_ID: ${{ secrets.SHOPIFY_THEME_ID }}
+        run: |
+          shopify theme push --store $SHOPIFY_STORE --password $SHOPIFY_PASSWORD --theme-id $SHOPIFY_THEME_ID --path . --allow-live
