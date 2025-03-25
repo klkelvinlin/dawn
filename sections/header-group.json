@@ -15,9 +15,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0"
-      ]
+      "block_order": []
     },
     "header": {
       "type": "header",
