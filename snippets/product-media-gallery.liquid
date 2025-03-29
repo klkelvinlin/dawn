@@ -20,7 +20,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    let allImages = [...document.querySelectorAll('[data-variant-alt]')];
+    let allImages = [...document.querySelectorAll('.media-item img')];
 
     function getSelectedOptions(variantSelector) {
       const selectedValues = [];
@@ -39,11 +39,24 @@
       return selectedValues;
     }
 
+    function parseFilename(filename) {
+      // Remove file extension and split by underscore
+      const parts = filename.split('.')[0].split('_');
+      // First part is variant1, second part is variant2, third part is index
+      const [variant1, variant2, index] = parts;
+      return {
+        variant1: variant1,
+        variant2: variant2,
+        index: index,
+      };
+    }
+
     function filterImages(selectedOptions) {
       let visibleCount = 0;
       allImages.forEach((img) => {
-        const variants = img.dataset.variantAlt.split(',').map((v) => v.trim());
-        const match = selectedOptions.every((opt) => variants.includes(opt));
+        const filename = img.src.split('/').pop();
+        const variants = parseFilename(filename);
+        const match = selectedOptions.every((opt) => variants.variant1 === opt || variants.variant2 === opt);
         const mediaItem = img.closest('li, .media-item');
 
         if (match) {
@@ -81,7 +94,7 @@
 
     // Observe for dynamic DOM replacements
     const observer = new MutationObserver(() => {
-      allImages = [...document.querySelectorAll('[data-variant-alt]')];
+      allImages = [...document.querySelectorAll('.media-item img')];
       bindVariantEvents();
     });
 
