@@ -53,34 +53,43 @@
           "settings": {
             "heading": "Materials",
             "icon": "leather",
-            "content": "",
+            "content": "<ul><li>High-quality stretched canvas</li><li>Sturdy Russian Scots Pine (Pinus sylvestris) wooden frame</li></ul>",
             "page": ""
           }
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Shipping",
             "icon": "truck",
-            "content": "",
+            "content": "<ul><li>Orders <b>$49 and up</b> : <b>Free</b></li><li>Orders <b>under $49</b> : Economy: <b>$5.99</b>, Standard: <b>$7.99</b></li></ul>",
             "page": ""
           }
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
+            "heading": "Returns",
+            "icon": "recycle",
+            "content": "<h5>All of our products are made to order, which means we do not accept returns or exchanges for reasons such as change of mind or ordering the wrong item.<h5>However, we want you to be happy with your purchase! If your order arrives damaged or you receive the wrong item, don't hesitate to get in touch with us within 7 days of delivery with your order number and clear photos of the issue. We’ll gladly offer a replacement or refund in these cases.<h5>To be eligible for a return or replacement:<ul><li>The item must be unused and in its original condition.</li><li>Proof of damage or incorrect item must be provided (photos).</li><li>Claims must be submitted within 7 days of receiving your order.</li></ul><h5>If you have any questions or concerns, feel free to contact us. We’re here to help!</h5>",
             "page": ""
           }
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "<ul><li>Small: 12x18 inches</li><li>Medium: 16x24 inches</li><li>Large: 24x36 inches</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible-row-4": {
+          "type": "collapsible_tab",
+          "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
-            "content": "",
+            "content": "<ul><li>Gently dust the canvas with a soft, dry cloth or feather duster.</li><li>Avoid using water, cleaning sprays, or chemical cleaners on the surface.</li><li>Keep the canvas away from direct sunlight and high humidity to prevent fading or warping.</li><li>Do not touch the printed surface with your fingers to avoid smudges or oil marks.</li><li>If needed, lightly vacuum the back of the canvas using a brush attachment.</li></ul>",
             "page": ""
           }
         },
@@ -103,6 +112,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
+        "collapsible-row-4",
         "share"
       ],
       "settings": {
